@@ -5,15 +5,19 @@ import s from './Message.module.css'
 export type MessagePropsType = {
     message: {
         id: number
-        user: {
-            avatar: string
-            name: string
-        },
-        message: {
-            text: string
-            time: string
-        }
+        user: UserPropsType,
+        message: MessageProps
     }
+}
+
+export type UserPropsType = {
+    avatar: string
+    name: string
+}
+
+export type MessageProps = {
+    text: string
+    time: string
 }
 
 // нужно отобразить приходящие данные
